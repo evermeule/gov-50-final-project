@@ -1,0 +1,31 @@
+---
+title: "Gov 50 Final Project"
+author: "Emily Vermeule"
+description: "My final project"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+
+## Project thoughts
+
+I am interested in exploring data related to... demographic decline (marriage and fertility rates), perhaps in a specific country, in conjunction with specific economic pressures. I'd specifically like to figure out how to quantify certain ideological metrics, like perspective on marriage, and compare whether ideology or economics are more influential on fertility demographics. 
+
+## Proposal
+How does educational attainment impact rates of marriage and childbirth for women? I am interested in considering both rates of marriage and also the amount of women who have more than 1 child through the framework of educational attainment and committment to a career. My dataset includes variables of educational attainment, hours worked per week, income, children and marriage status, including the age at which the woman married. I hypothesize that women with higher educational attainment will marry at lower rates, and later in life than those with relatively less education; furthermore, I hypothesize that married women with higher educational attainment status will have fewer children. I expect that this will be due to highly educated women getting married relatively later and spending relatively more time on a career. I would like to sort women into two groups: those who attended university and those who stopped their education at the high school level. I will then observe whether or not these women marry, how many children they have, and whether they are the primary breadwinner (based on a comparison of the woman's income and their spouse's income). If I observe that marriage rates and rates of childbirth seem to be correlated with each other and with lower education rates for women, that would support my hypothesis. If I see that these variables have a conflicting relationship or are correlated instead with higher education, this would disprove it. I am also interested to see whether my baseline assumption that women with higher education will spend more time working & have higher incomes (perhaps a smaller difference between their own and their spouses' income) than their lower education counterparts will be proven.
+
+
+```{r}
+
+#library(haven)
+marriagedata <- read_stata("marriagedata.dta")
+#View(dataset)
+
+
+
+
+hist(marriagedata$nchild, breaks = seq(-.5, 10.5, 1), main = "Distribution of Number of Children", xlab = "Number of Children", ylab = "Proportion", freq = FALSE)
+
+```
